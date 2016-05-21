@@ -2,7 +2,7 @@
     "name": "numeric-keyboard",
     "version": "0.0.1",
     "description": "Numeric Keyboard",
-    "private": false,
+    "private": true,
     "author": [
         {
             "name": "rc23",

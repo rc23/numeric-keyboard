@@ -2,7 +2,11 @@
     "name": "numeric-keyboard",
     "version": "0.0.1",
     "description": "Numeric Keyboard",
-    "private": false,
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/rc23/numeric-keyboard.git"
+    },
     "scripts": {
         "postinstall": "node_modules/.bin/bower install"
     },

@@ -1,0 +1,79 @@
+.numeric-keyboard {
+    $font-color: #1E1E1E;
+    $border-color: #BFBFBF;
+    $right-panel-background-color: #ECECEC;
+    $active-color: #CCCCCC;
+
+    box-sizing: border-box;
+    outline: none;
+    user-select: none;
+    background: white;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 28px;
+    color: $font-color;
+    display: table;
+    width: 100%;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .panel-left {
+        display: table-cell;
+        vertical-align: top;
+        height: 216px;
+        width: 75%;
+    }
+
+    .panel-right {
+        display: table-cell;
+        vertical-align: top;
+        height: 216px;
+        width: 25%;
+        background-color: $right-panel-background-color ;
+    }
+
+    .panel-row {
+        display: table;
+        width: 100%;
+    }
+
+    .button-container, .button-container-0, .button-container-clear, .button-container-confirm {
+        display: table-cell;
+        height: 54px;
+        vertical-align: middle;
+        text-align: center;
+        border-top: 1px solid $border-color ;
+        border-left: 1px solid $border-color ;
+
+
+        &:active {
+            background-color: $active-color;
+        }
+    }
+
+    .panel-col1 {
+        border-left: none;
+    }
+
+    .button-container-clear, .button-container-confirm {
+        height: 108px;
+        font-size: 20px;
+        width: 34%;
+        font-weight: bold;
+
+        .keyboard {
+            display: inline-block;
+        }
+    }
+
+    .button-container {
+        width: 33%;
+    }
+
+    .button-container-0 {
+        width: 66%;
+        border-left: none;
+    }
+}

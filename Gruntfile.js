@@ -164,6 +164,9 @@ module.exports = function (grunt) {
                     removeEmptyAttributes: true,
                     removeOptionalTags: true,
                     removeRedundantAttributes: true
+                },
+                url: function changeURL(url) {
+                    return grunt.template.process('KEYBOARD#' + url);
                 }
             },
             build: {
@@ -335,7 +338,7 @@ module.exports = function (grunt) {
                 ]
             }
         },
-        // Add vendor prefixes to CSS.
+        // Add vendor prefixes to CSS
         autoprefixer: {
             options: {
                 browsers: ['> 1%', 'last 3 versions', 'Android >= 2']

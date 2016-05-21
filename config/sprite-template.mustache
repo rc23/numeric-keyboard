@@ -1,0 +1,32 @@
+%svg {
+    background-image: url("{{{svgPath}}}");
+    .no-svg & {
+        background-image: url("{{{pngPath}}}");
+        @media
+                only screen and (-webkit-min-device-pixel-ratio: 2),
+                not all,
+                only screen and (min-resolution: 2dppx),
+                only screen and (min-resolution: 192dpi) {
+            background-image: url("{{{pngPath2x}}}");
+        }
+        @media
+                only screen and (-webkit-min-device-pixel-ratio: 3),
+                not all,
+                only screen and (min-resolution: 3dppx),
+                only screen and (min-resolution: 288dpi) {
+            background-image: url("{{{pngPath3x}}}");
+        }
+    }
+
+    background-size: {{spriteWidth}}px {{spriteHeight}}px;
+    background-repeat: no-repeat;
+}
+
+{{#shapes}}
+{{#selector.shape}}{{expression}}{{^last}},{{/last}}{{/selector.shape}} {
+    width: {{width.inner}}px;
+    height: {{height.inner}}px;
+    background-position: {{#position.absolute}}({{x}}px - {{padding.top}}px) ({{y}}px - {{padding.top}}px);{{/position.absolute}}
+    @extend %svg;
+}
+{{/shapes}}

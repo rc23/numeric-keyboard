@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Numeric Keyboard</title>
+        <link rel="stylesheet" href="../dist/css/numeric-keyboard.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .test-input-container {
+                padding: 10px 40px;
+            }
+
+            .test-input {
+                border: 2px solid #df5000;
+                border-radius: 8px;
+                width: 120px;
+            }
+
+            .test-keyboard-container {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <main ng-app="numeric-keyboard">
+            <div ng-controller="dummyController as dummyCtrl">
+                <div class="test-input-container">
+                    <span>numeric-input="true"</span>
+                    <input type="text" class="test-input" ng-model="dummyCtrl.values.a" numeric-input="true" readonly="readonly"/>
+                </div>
+                <div class="test-input-container">
+                    <span>numeric-input="false"</span>
+                    <input type="text" class="test-input" ng-model="dummyCtrl.values.b" numeric-input="false"/>
+                </div>
+                <div class="test-keyboard-container">
+                    <numeric-keyboard comma-separator="false" confirm-label="'OK'"></numeric-keyboard>
+                </div>
+            </div>
+        </main>
+
+        <script src="../vendor/angular/angular.js"></script>
+        <script src="../vendor/angular-mocks/angular-mocks.js"></script>
+        <script src="../vendor/angular-touch/angular-touch.js"></script>
+        <script src="../dist/numeric-keyboard-module.js"></script>
+    </body>
+</html>
