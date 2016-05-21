@@ -7,10 +7,17 @@ angular.module('numeric-keyboard')
 
             self.decimalSeparator =  $scope.commaSeparator ? ',' : '.'; // COMMA or DOT
 
-            //CONFIG SERVICE
+            // CONFIG SERVICE
             numericKeyboardService.setDecimalSeparator(self.decimalSeparator);
 
-            //API
+            // Detection for touch devices
+            self.isTouchDevice = function isTouchDevice() {
+                return window['ontouchstart'] !== undefined ||
+                    (navigator.maxTouchPoints > 0) ||
+                    (navigator.msMaxTouchPoints > 0);
+            };
+
+            // API
             self.keyboardVisibility    = numericKeyboardService.isKeyboardVisible;
             self.toggleVisibility      = numericKeyboardService.toggleKeyboardVisibility;
             self.clickNumber           = numericKeyboardService.clickNumber;

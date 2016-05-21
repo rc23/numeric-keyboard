@@ -22,7 +22,10 @@
     </div>
     <div class="panel-right">
         <div class="panel-row">
-            <div class="button-container-clear numeric-input-clear" touchstart="numericKeyboardCtrl.startDelete()" touchend="numericKeyboardCtrl.stopDelete()">
+            <div class="button-container-clear numeric-input-clear" ng-if="::!numericKeyboardCtrl.isTouchDevice()" ng-click="numericKeyboardCtrl.clickDelete()">
+                <span class="keyboard"></span>
+            </div>
+            <div class="button-container-clear numeric-input-clear" ng-if="::numericKeyboardCtrl.isTouchDevice()" touchstart="numericKeyboardCtrl.startDelete()" touchend="numericKeyboardCtrl.stopDelete()">
                 <span class="keyboard"></span>
             </div>
         </div>

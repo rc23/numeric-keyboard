@@ -15,12 +15,6 @@
                 padding: 10px 40px;
             }
 
-            .test-input {
-                border: 2px solid #df5000;
-                border-radius: 8px;
-                width: 120px;
-            }
-
             .test-keyboard-container {
                 position: fixed;
                 bottom: 0;
@@ -33,11 +27,11 @@
             <div ng-controller="dummyController as dummyCtrl">
                 <div class="test-input-container">
                     <span>numeric-input="true"</span>
-                    <input type="text" class="test-input" ng-model="dummyCtrl.values.a" numeric-input="true" readonly="readonly"/>
+                    <input type="text" ng-model="dummyCtrl.values.a" numeric-input="true" readonly="readonly"/>
                 </div>
                 <div class="test-input-container">
                     <span>numeric-input="false"</span>
-                    <input type="text" class="test-input" ng-model="dummyCtrl.values.b" numeric-input="false"/>
+                    <input type="text" ng-model="dummyCtrl.values.b" numeric-input="false"/>
                 </div>
                 <div class="test-keyboard-container">
                     <numeric-keyboard comma-separator="false" confirm-label="'OK'"></numeric-keyboard>
