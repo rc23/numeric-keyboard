@@ -54,3 +54,9 @@ to disable the "numeric-input" behaviour:
 
 
 Note: the input will inherit the class `numeric-input` with all the necessary css.
+
+
+## Screenshot
+![Alt text](/config/keyboard.png "Keyboard")
+
+
