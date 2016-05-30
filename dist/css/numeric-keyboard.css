@@ -68,7 +68,7 @@
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 28px;
   color: #1E1E1E;
-  display: table;
+  display: none;
   width: 100%;
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
@@ -123,6 +123,10 @@
 .numeric-keyboard .button-container-0 {
   width: 66%;
   border-left: none;
+}
+
+.numeric-keyboard-open {
+  display: table;
 }
 
 .keyboard {
