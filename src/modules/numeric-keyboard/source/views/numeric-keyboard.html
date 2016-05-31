@@ -1,4 +1,4 @@
-<div class="numeric-keyboard" ng-show="numericKeyboardCtrl.keyboardVisibility()">
+<div class="numeric-keyboard" ng-class="{'numeric-keyboard-open' : numericKeyboardCtrl.keyboardVisibility()}">
     <div class="panel-left">
         <div class="panel-row">
             <div class="button-container panel-col1 numeric-input-1" ng-click="numericKeyboardCtrl.clickNumber(1)">1</div>
